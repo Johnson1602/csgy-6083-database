@@ -23,7 +23,6 @@ create table Devices(
     launch_date date,
     type varchar(32),
     price decimal,
-    tid serial not null unique,
     capacity integer,
     chip varchar(32),
     camera varchar(128),
