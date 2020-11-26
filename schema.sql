@@ -30,12 +30,12 @@ create table Devices(
     battery integer,
     dimension varchar(32),
     screen_size decimal,
-    weight integer,
+    weight decimal,
     os varchar(32),
     C_name varchar(32) not null,
     primary key (name, launch_date),
     foreign key (C_name) references Companies(name),
-    check (type in ('Phone', 'Laptop','Pad','Watch','Other'))
+    check (type in ('Phone', 'Laptop', 'Pad', 'Watch', 'Other'))
 );
 
 create table Manufactures(
@@ -47,15 +47,15 @@ create table Produce(
     M_name varchar(32),
     D_name varchar(32),
     launch_date date,
-    primary key (M_name,D_name,launch_date),
+    primary key (M_name, D_name, launch_date),
     foreign key (M_name) references Manufactures(name),
-    foreign key (D_name,launch_date) references Devices(name, launch_date)
+    foreign key (D_name, launch_date) references Devices(name, launch_date)
 );
 
 create table Hire(
     M_name varchar(32),
     C_name varchar(32),
-    primary key (M_name,C_name),
+    primary key (M_name, C_name),
     foreign key (M_name) references Manufactures(name),
     foreign key (C_name) references Companies(name)
 );
@@ -63,14 +63,15 @@ create table Hire(
 create table Retailers(
     name varchar(32) primary key,
     type varchar(32),
-    check(type in ('Comprehensive','Electronic','Carrier','Official','Other'))
+    check(type in ('Comprehensive', 'Electronic', 'Carrier', 'Official', 'Other'))
 );
 
 create table Sales(
     id serial primary key,
+    year integer,
     season char(2),
     profit decimal not null,
-    check(season in ('Q1','Q2','Q3','Q4'))
+    check(season in ('Q1', 'Q2', 'Q3', 'Q4'))
 );
 
 create table Retailers_Sale(
@@ -78,8 +79,8 @@ create table Retailers_Sale(
     launch_date date,
     R_name varchar(32),
     sid integer,
-    primary key (D_name,launch_date,R_name,sid),
-    foreign key (D_name,launch_date) references Devices(name, launch_date),
+    primary key (D_name, launch_date, R_name, sid),
+    foreign key (D_name, launch_date) references Devices(name, launch_date),
     foreign key (R_name) references Retailers(name),
     foreign key (sid) references Sales(id)
 );
@@ -90,7 +91,7 @@ create table Stores(
     address varchar(128),
     operation_time varchar(32),
     contact_number varchar(32),
-    primary key (id,R_name),
+    primary key (id, R_name),
     foreign key (R_name) references Retailers(name) on delete cascade
 );
 
@@ -112,7 +113,7 @@ create table Reviews(
     D_name varchar(32) not null,
     launch_date date not null,
     U_name varchar(32) not null,
-    foreign key (D_name,launch_date) references Devices(name, launch_date),
+    foreign key (D_name, launch_date) references Devices(name, launch_date),
     foreign key (U_name) references Users(username),
-    check (rating in (1,2,3,4,5))
+    check (rating in (1, 2, 3, 4, 5))
 );
