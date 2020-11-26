@@ -14,7 +14,7 @@ create table Companies(
     name varchar(32) primary key,
     country varchar(32),
     founder varchar(32),
-    found_date date,
+    found_date varchar(16),
     website varchar(128)
 );
 
@@ -25,7 +25,7 @@ create table Devices(
     price decimal,
     capacity integer,
     chip varchar(32),
-    camera integer,
+    camera decimal,
     battery integer,
     dimension varchar(32),
     screen_size decimal,
