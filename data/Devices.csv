@@ -1,0 +1,11 @@
+name,launch_date,type,price,capacity,chip,camera,battery,dimension,screen_size,weight,os,C_name
+iphone 12 pro max,2020-11-3,Phone,1099,128,A14,12,3678,6.33'' x 3.07'' x 0.29'',6.7,228,IOS 14,Apple
+iphone 12 pro,2020-10-23,Phone,999,128,A14,12,2815,5.78'' x 2.82'' x 0.29'',6.1,189,IOS 14,Apple
+Surface Laptop Go,2020-10-1,Laptop,699,128,i5-1035G1,,,10.95¡± x 8.10¡± x 0.61¡±?,12.4,1110,Windows 10 pro,Microsoft
+ipad Air,2020-10-23,Pad,599,64,A14,12,8827,9.74'' x 7'' x 0.24'',10.9,458,iPadOS 14,Apple
+Pixel 5,2020-10-15,Phone,699,128,Snapdragon?765G,12.2,4080,5.7'' x 2.8'' x0.3'',6,151,Android 11,Google
+Samsung Galaxy A21,2020-4-8,Phone,250,128,Samsung Exynos 7 Octa,13,3600,2.8'' x 5.91'' x 0.33'',5.8,159,Android 10,Samsung
+Samsung S20 5G,2020-3-6,Phone,799,128,64-bit octa-core?processor,12,4000,5.97'' x 2.72'' x 0.31'',6.2,163,Android 10,Samsung
+Alienware Aurora R11,2020-5-13,Desktop,890,,i5-10400F,,,18.9'' x 8.77'' x 17'',,17800,Windows 10 Home?,Dell
+HUAWEI Mate 40 Pro+,2020-10-22,Phone,1655,256,Kirin 9000,12,4400,6.41'' x 2.97'' x 0.35'',6.76,230,EMUI 11,Huawei
+Apple watch S6,2020-9-18,Watch,399,32,S6 SiP with 64-bit dual-core processor,,303,1.73'' x 1.5'' x 0.41'',1.78,47.1,watchOS 7.0,Apple

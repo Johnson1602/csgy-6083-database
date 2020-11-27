@@ -25,3 +25,8 @@
 - 查看产品的评价：Devices join Reviews join Users
 - 查看经销商销售额：Retailers join Sales join Retailers_Sale
 - 年度销量（SUM）榜：Devices join Retailers join Sales join Retailers_Sale
+
+## Tomorrow: 
+- retailer_sales table
+- update schema.sql(Supplier,Collaborate)
+- update ER
