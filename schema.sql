@@ -1,5 +1,5 @@
 drop table if exists Devices cascade;
-drop table if exists Manufactures cascade;
+drop table if exists Manufacturers cascade;
 drop table if exists Produce cascade;
 drop table if exists Companies cascade;
 drop table if exists Hire cascade;
@@ -37,7 +37,7 @@ create table Devices(
     check (type in ('Phone', 'Laptop', 'Pad', 'Watch', 'Other'))
 );
 
-create table Manufactures(
+create table Manufacturers(
     name varchar(32) primary key,
     country varchar(32)
 );
@@ -47,7 +47,7 @@ create table Produce(
     D_name varchar(32),
     launch_date date,
     primary key (M_name, D_name, launch_date),
-    foreign key (M_name) references Manufactures(name),
+    foreign key (M_name) references Manufacturers(name),
     foreign key (D_name, launch_date) references Devices(name, launch_date)
 );
 
@@ -55,7 +55,7 @@ create table Hire(
     M_name varchar(32),
     C_name varchar(32),
     primary key (M_name, C_name),
-    foreign key (M_name) references Manufactures(name),
+    foreign key (M_name) references Manufacturers(name),
     foreign key (C_name) references Companies(name)
 );
 
@@ -69,7 +69,7 @@ create table Sales(
     id serial primary key,
     year integer,
     season char(2),
-    profit decimal not null,
+    quantity integer not null,
     check(season in ('Q1', 'Q2', 'Q3', 'Q4'))
 );
 

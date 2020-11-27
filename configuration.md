@@ -13,6 +13,9 @@
 - psycopg2-binary (2.8.6)
 - SSL port number: 8548
 
+## commands
+- psql -h localhost -U wx650 project_db
+
 ## add data into tables
 - \copy companies from '/Users/johnson/Downloads/Companies.csv' with delimiter ',' csv header;
 
