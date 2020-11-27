@@ -88,7 +88,7 @@ create table Stores(
     id integer,
     R_name varchar(32),
     address varchar(128),
-    operation_time varchar(32),
+    operation_time varchar(128),
     contact_number varchar(32),
     primary key (id, R_name),
     foreign key (R_name) references Retailers(name) on delete cascade
