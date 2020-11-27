@@ -98,8 +98,8 @@ create table Users(
     username varchar(32) primary key,
     age integer,
     gender char(1),
-    password varchar(32) not null,
-    email varchar(32) not null,
+    password char(64) not null,
+    email varchar(32),
     check (gender in ('M', 'F', '')),
     check (age > 0)
 );
