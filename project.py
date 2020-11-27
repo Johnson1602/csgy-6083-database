@@ -76,49 +76,49 @@ if choice == "Home":
             "View all sales of a particular retailer",
             "List the sales of devices in descending order"]
     functions = st.selectbox("Functions", tasks)
-    if functions == task[0]:
+    if functions == tasks[0]:
         st.subheader("List All devices produced by a particular supplier")
         sql_suppliers = "select name from Suppliers;"
-        suppliers = query_db(sql)['name'].tolist()
+        suppliers = query_db(sql_suppliers)['name'].tolist()
         supplier_sel = st.selectbox('choose a supplier', suppliers)
         if supplier_sel:
-            sql_devices = f'select * from devices d, suppliers s,produce p where d.name = p.D_name and d.launch_date = p.launch_date and p.M_name='{supplier_sel}';'
+            sql_devices = f"select * from devices d, suppliers s,produce p where d.name = p.D_name and d.launch_date = p.launch_date and p.M_name='{supplier_sel}';"
             devices = query_db(sql_devices)
             st.dataframe(devices)
     
-    elif function == task[1]:
-        st.subheader("View devices that AVG score within a particular range")
-        sql_devices = f'select d.name, d.launch_date, sum(r.rating)/count(*) as avg_rating from devices d,reviews r where d.name = r.D_name and d.launch_date = r.launch_date groupy by d.name,d.launch_date having avg_rating >= {left} and avg_rating <= {right};'
-        devices = query_db(sql_devices)
-        st.dataframe(devices)
+    # elif function == tasks[1]:
+    #     st.subheader("View devices that AVG score within a particular range")
+    #     sql_devices = f'select d.name, d.launch_date, sum(r.rating)/count(*) as avg_rating from devices d,reviews r where d.name = r.D_name and d.launch_date = r.launch_date groupy by d.name,d.launch_date having avg_rating >= {left} and avg_rating <= {right};'
+    #     devices = query_db(sql_devices)
+    #     st.dataframe(devices)
         
-    elif function == task[2]:
+    elif functions == tasks[2]:
         st.subheader("List all reviews of a product")
         sql_devices = "select name from devices;"
         devices = query_db(sql_devices)['name'].tolist()
         device_sel = st.selectbox('choose a device', devices)
         if device_sel:
-            sql_reviews = f'select D_name as name, launch_date, rating, time, U_name, content from reviews where D_name = '{device_sel}';'
+            sql_reviews = f"select D_name as name, launch_date, rating, time, U_name, content from reviews where D_name = '{device_sel}';"
             reviews = query_db(sql_reviews)
             st.dataframe(reviews)
             
-    elif function == task[3]:
+    elif functions == tasks[3]:
         st.subheader("View all sales of a particular retailer")
         sql_retailers = 'select name from retailers;'
-        retailers = query_db(sql_retailers)['name'].tolist
+        retailers = query_db(sql_retailers)['name'].tolist()
         retailer_sel = st.selectbox('choose a retailer', retailers)
         if retailer_sel:
-            sql_sales = f'select r.sid, r.D_name as name, r.launch_date, s.year, s.season, s.quantity from sales s, Retailers_Sale r where r.R_name = '{retailer_sel}' and r.sid = s.id;'
+            sql_sales = f"select r.sid, r.D_name as name, r.launch_date, s.year, s.season, s.quantity from sales s, Retailers_Sale r where r.R_name = '{retailer_sel}' and r.sid = s.id;"
             sales = query_db(sql_sales)
             st.dataframe(sales)
         
-    elif function == task[4]:
+    elif functions == tasks[4]:
         st.subheader("List the sales of devices in descending order")
         sql_devices = "select name from devices;"
         devices = query_db(sql_devices)['name'].tolist()
         device_sel = st.selectbox('choose a device', devices)
         if device_sel:
-            sql_sales = f'select r.D_name as name, r.launch_date, sum(s.quantity) as quantity from Retailers_Sale r, sales s where r.D_name = '{device_sel}' and r.sid = s.id group by r.D_name order by sum(s.quantity) desc;'
+            sql_sales = f"select r.D_name as name, r.launch_date, sum(s.quantity) as quantity from Retailers_Sale r, sales s where r.D_name = '{device_sel}' and r.sid = s.id group by r.D_name order by sum(s.quantity) desc;"
             sales = query_db(sql_sales)
             st.dataframe(sales)
         
