@@ -1,99 +1,99 @@
-R_name,id,address,contact_number,operation_time
-Walmart,1610,100 Elmridge Center Dr,585-227-0720,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,1619,1200 Marketplace Dr,585-292-6000,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,1677,4765 Commercial Dr,315-736-4932,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1673,4238 Recreation Dr,585-394-5300,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1705,1860 N Road,315-539-2560,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1731,990 State Route 5 And 20,315-781-3253,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1744,1990 Brandt Point Drive,585-787-1370,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00"
-Walmart,1781,819 Bennie Rd,607-756-1776,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1806,329 S Kingsboro Ave Ext,518-725-2403,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1810,26 W Merritt Blvd,845-896-8192,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1813,6788 State Route 31 E,315-331-5081,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1830,297 Grant Ave,315-255-0532,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1831,8770 Dell Center Drive,315-622-5401,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1835,2405 Vestal Pkwy E,607-798-1011,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1871,20823 State Route 3,315-786-0145,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1909,1540 Military Rd,716-298-4484,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1926,341 State Route 104,315-342-6210,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1940,279 Troy Rd,518-283-3055,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1946,43 Stephenville St,315-769-1072,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1949,10401 Bennett Rd,716-679-3150,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1959,470 Route 211 E,845-342-0222,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1966,4235 Veteran Dr,585-243-4090,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1973,350 E Fairmount Ave,716-763-0945,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1976,1400 County Rd 64,607-739-1714,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1994,25 Consumer Sq,518-561-0195,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1993,6265 Brockport Spencerport Rd,585-637-6331,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,1997,800 Loudon Road,518-783-4086,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,2043,2348 Route #19,585-786-0700,"monday - friday : 06:00-22:00, saturday : 06:00-22:00, sunday : 06:00-22:00"
-Walmart,2056,16 Old Gick Rd,518-581-8035,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2088,4133 Veterans Memorial Dr,585-345-1050,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2092,3000 Ford Street Ext,315-394-8990,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00"
-Walmart,2093,710 Horatio St,315-738-1155,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2097,460 Fairview Ave,518-822-0160,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2104,1201 Route 300,845-567-6007,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2107,5735 South Transit Road,716-438-2404,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2116,891 Route #9,518-793-0309,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2120,5396 State Highway 12,607-334-5553,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2135,139 Merchant Pl,518-234-1090,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2146,101 Sanford Farms Shopping Ctr,518-843-6890,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2152,141 Washington Ave Extension,518-869-4694,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,2156,750 Middle Country Rd,631-924-0081,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00"
-Walmart,2159,1869 Plaza Dr,716-373-2781,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2164,317 S Cascade Dr,716-592-1460,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2166,6438 Basile Rowe,315-434-9873,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00"
-Walmart,2210,3290 Sheridan Dr,716-691-0195,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2234,5815 Rome Taberg Rd,315-338-7900,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2262,5054 State Highway 23,607-431-9557,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2264,1320 Altamont Ave,518-355-2596,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00"
-Walmart,2285,103 N Caroline St,315-717-0023,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2286,161 Centereach Mall,631-467-4825,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,2326,1000 State Route 36,607-324-7019,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00"
-Walmart,2351,30 Catskill Cmns,518-943-9423,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2355,5033 Transit Rd,716-565-0250,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2370,760 Hoosick Rd,518-279-0685,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,2405,5360 Southwestern Blvd,716-646-0682,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2424,1134 Wicker St,518-585-3060,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2444,2024 Genesee St,315-361-1037,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2504,601 Frank Stottile Blvd,845-336-4159,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2531,3133 E Main St,914-526-1100,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00"
-Walmart,2547,41 Anawana Lake Rd,845-796-7202,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2581,5399 W Genesee St,315-487-0121,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2583,1123 Jerusalem Ave,516-505-1508,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,2586,2500 Walden Ave,716-896-3669,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,2637,288 Larkin Dr,845-783-3505,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2785,441 Commerce Dr,585-398-6038,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,2844,1549 Route 9,518-373-8457,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2859,2150 Chili Ave,585-429-9640,"monday - friday : 06:00-22:00, saturday : 06:00-22:00, sunday : 06:00-22:00"
-Walmart,2874,200 Dutch Meadows Ln,518-344-7035,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2905,250 Route 59,845-368-4705,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00"
-Walmart,2906,1890 Old Country Rd,631-369-1041,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00"
-Walmart,2911,3018 East Ave,315-668-0400,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,2915,3990 Nesconset Hwy,631-474-3287,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,2916,2465 Hempstead Tpke,516-579-3307,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,2917,1850 Veterans Hwy,631-851-0468,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,2992,3217 Silverback Ln,607-937-9627,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,3221,515 E 4th St,607-535-3108,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,3280,1490 Hudson Ave,585-266-2000,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,3329,7494 Us Highway 11,315-268-6900,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,3332,1818 State Route #3,315-598-1773,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,3334,3222 State Route 11,518-483-5968,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,3420,1220 Old Country Rd,516-794-7280,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00"
-Walmart,3583,311 Route 9w,518-432-6120,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00"
-Walmart,3607,13858 State Route 31,585-589-0608,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,3842,425 State Route 31,315-986-1584,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,4184,3335 Hempstead Tpke,516-490-0438,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,4403,24 Quaker Ridge Blvd,518-746-4155,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,4570,7500 Route 209,845-647-2671,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,4597,886 Niagara Falls Blvd,716-243-4138,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,5027,4975 Transit Rd,716-206-3050,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,5202,85 Crooked Hill Rd,631-864-0806,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00"
-Walmart,5240,135 Fairgrounds Memorial Pkwy,607-277-4510,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,5242,8064 Brewereton Road,315-698-0130,"monday - friday : 00:00-23:59, saturday : 00:00-23:59, sunday : 00:00-23:59"
-Walmart,5282,3800 Dewey Ave,585-957-7382,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,5293,77 Green Acres Rd,516-887-0127,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00"
-Walmart,5295,965 Broadhollow Rd,631-752-8768,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00"
-Walmart,5497,25737 Us Route #11,315-629-2124,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
-Walmart,5498,7155 E State St # 12south,315-376-7030,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00"
-Walmart,5732,2 Gannett Dr,607-240-5040,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00"
+id,R_name,address,operation_time,contact_number
+1610,Walmart,100 Elmridge Center Dr,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",585-227-0720
+1619,Walmart,1200 Marketplace Dr,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",585-292-6000
+1677,Walmart,4765 Commercial Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-736-4932
+1673,Walmart,4238 Recreation Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",585-394-5300
+1705,Walmart,1860 N Road,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-539-2560
+1731,Walmart,990 State Route 5 And 20,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-781-3253
+1744,Walmart,1990 Brandt Point Drive,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00",585-787-1370
+1781,Walmart,819 Bennie Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-756-1776
+1806,Walmart,329 S Kingsboro Ave Ext,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-725-2403
+1810,Walmart,26 W Merritt Blvd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",845-896-8192
+1813,Walmart,6788 State Route 31 E,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-331-5081
+1830,Walmart,297 Grant Ave,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-255-0532
+1831,Walmart,8770 Dell Center Drive,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-622-5401
+1835,Walmart,2405 Vestal Pkwy E,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-798-1011
+1871,Walmart,20823 State Route 3,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-786-0145
+1909,Walmart,1540 Military Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-298-4484
+1926,Walmart,341 State Route 104,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-342-6210
+1940,Walmart,279 Troy Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-283-3055
+1946,Walmart,43 Stephenville St,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-769-1072
+1949,Walmart,10401 Bennett Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-679-3150
+1959,Walmart,470 Route 211 E,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",845-342-0222
+1966,Walmart,4235 Veteran Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",585-243-4090
+1973,Walmart,350 E Fairmount Ave,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-763-0945
+1976,Walmart,1400 County Rd 64,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-739-1714
+1994,Walmart,25 Consumer Sq,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-561-0195
+1993,Walmart,6265 Brockport Spencerport Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",585-637-6331
+1997,Walmart,800 Loudon Road,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",518-783-4086
+2043,Walmart,2348 Route #19,"monday - friday : 06:00-22:00, saturday : 06:00-22:00, sunday : 06:00-22:00",585-786-0700
+2056,Walmart,16 Old Gick Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-581-8035
+2088,Walmart,4133 Veterans Memorial Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",585-345-1050
+2092,Walmart,3000 Ford Street Ext,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00",315-394-8990
+2093,Walmart,710 Horatio St,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-738-1155
+2097,Walmart,460 Fairview Ave,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-822-0160
+2104,Walmart,1201 Route 300,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",845-567-6007
+2107,Walmart,5735 South Transit Road,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-438-2404
+2116,Walmart,891 Route #9,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-793-0309
+2120,Walmart,5396 State Highway 12,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-334-5553
+2135,Walmart,139 Merchant Pl,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-234-1090
+2146,Walmart,101 Sanford Farms Shopping Ctr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-843-6890
+2152,Walmart,141 Washington Ave Extension,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",518-869-4694
+2156,Walmart,750 Middle Country Rd,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00",631-924-0081
+2159,Walmart,1869 Plaza Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-373-2781
+2164,Walmart,317 S Cascade Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-592-1460
+2166,Walmart,6438 Basile Rowe,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00",315-434-9873
+2210,Walmart,3290 Sheridan Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-691-0195
+2234,Walmart,5815 Rome Taberg Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-338-7900
+2262,Walmart,5054 State Highway 23,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-431-9557
+2264,Walmart,1320 Altamont Ave,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00",518-355-2596
+2285,Walmart,103 N Caroline St,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-717-0023
+2286,Walmart,161 Centereach Mall,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",631-467-4825
+2326,Walmart,1000 State Route 36,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00",607-324-7019
+2351,Walmart,30 Catskill Cmns,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-943-9423
+2355,Walmart,5033 Transit Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-565-0250
+2370,Walmart,760 Hoosick Rd,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",518-279-0685
+2405,Walmart,5360 Southwestern Blvd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-646-0682
+2424,Walmart,1134 Wicker St,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-585-3060
+2444,Walmart,2024 Genesee St,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-361-1037
+2504,Walmart,601 Frank Stottile Blvd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",845-336-4159
+2531,Walmart,3133 E Main St,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00",914-526-1100
+2547,Walmart,41 Anawana Lake Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",845-796-7202
+2581,Walmart,5399 W Genesee St,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-487-0121
+2583,Walmart,1123 Jerusalem Ave,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",516-505-1508
+2586,Walmart,2500 Walden Ave,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",716-896-3669
+2637,Walmart,288 Larkin Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",845-783-3505
+2785,Walmart,441 Commerce Dr,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",585-398-6038
+2844,Walmart,1549 Route 9,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-373-8457
+2859,Walmart,2150 Chili Ave,"monday - friday : 06:00-22:00, saturday : 06:00-22:00, sunday : 06:00-22:00",585-429-9640
+2874,Walmart,200 Dutch Meadows Ln,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-344-7035
+2905,Walmart,250 Route 59,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00",845-368-4705
+2906,Walmart,1890 Old Country Rd,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00",631-369-1041
+2911,Walmart,3018 East Ave,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-668-0400
+2915,Walmart,3990 Nesconset Hwy,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",631-474-3287
+2916,Walmart,2465 Hempstead Tpke,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",516-579-3307
+2917,Walmart,1850 Veterans Hwy,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",631-851-0468
+2992,Walmart,3217 Silverback Ln,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-937-9627
+3221,Walmart,515 E 4th St,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-535-3108
+3280,Walmart,1490 Hudson Ave,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",585-266-2000
+3329,Walmart,7494 Us Highway 11,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-268-6900
+3332,Walmart,1818 State Route #3,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-598-1773
+3334,Walmart,3222 State Route 11,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-483-5968
+3420,Walmart,1220 Old Country Rd,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00",516-794-7280
+3583,Walmart,311 Route 9w,"monday - friday : 06:00-23:00, saturday : 06:00-23:00, sunday : 06:00-23:00",518-432-6120
+3607,Walmart,13858 State Route 31,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",585-589-0608
+3842,Walmart,425 State Route 31,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-986-1584
+4184,Walmart,3335 Hempstead Tpke,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",516-490-0438
+4403,Walmart,24 Quaker Ridge Blvd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",518-746-4155
+4570,Walmart,7500 Route 209,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",845-647-2671
+4597,Walmart,886 Niagara Falls Blvd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-243-4138
+5027,Walmart,4975 Transit Rd,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",716-206-3050
+5202,Walmart,85 Crooked Hill Rd,"monday - friday : 07:00-22:00, saturday : 07:00-22:00, sunday : 07:00-22:00",631-864-0806
+5240,Walmart,135 Fairgrounds Memorial Pkwy,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-277-4510
+5242,Walmart,8064 Brewereton Road,"monday - friday : 00:00-23:59, saturday : 00:00-23:59, sunday : 00:00-23:59",315-698-0130
+5282,Walmart,3800 Dewey Ave,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",585-957-7382
+5293,Walmart,77 Green Acres Rd,"monday - friday : 07:00-24:00, saturday : 07:00-24:00, sunday : 07:00-24:00",516-887-0127
+5295,Walmart,965 Broadhollow Rd,"monday - friday : 07:00-23:00, saturday : 07:00-23:00, sunday : 07:00-23:00",631-752-8768
+5497,Walmart,25737 Us Route #11,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",315-629-2124
+5498,Walmart,7155 E State St # 12south,"monday - friday : 06:00-24:00, saturday : 06:00-24:00, sunday : 06:00-24:00",315-376-7030
+5732,Walmart,2 Gannett Dr,"monday - friday : 00:00-24:00, saturday : 00:00-24:00, sunday : 00:00-24:00",607-240-5040
