@@ -14,7 +14,6 @@ def get_config(filename='database.ini', section='postgresql'):
 # perform sql queries
 # @st.cache
 def query_db(sql: str):
-    # print(f'Running query_db(): {sql}')
  
     db_info = get_config()
     # Connect to an existing database
@@ -38,13 +37,13 @@ def query_db(sql: str):
 
 st.title("Mobile Device Database")
 
-place = st.sidebar.radio("Places", ('Home', 'Basic Query', 'Advanced Query', 'Review'))
-
-menu = ["Login", "Sign Up", "Home", "Basic Query", "Advanced Query"]
+# Sidebar
+# Places
+place = st.sidebar.radio("Places", ('Home', 'Advanced Query', 'Review'))
+# Account
 choice = st.sidebar.selectbox("Account", ("Login", "Sign Up"))
 
 # Security
-# passlib,hashlib,bcrypt,scrypt
 import hashlib
 def make_hashes(password):
     return hashlib.sha256(str.encode(password)).hexdigest()
@@ -54,11 +53,18 @@ def register(username, password, age, gender, email):
     db_info = get_config()
     conn = psycopg2.connect(**db_info)
     cur = conn.cursor()
-    add_user = f"insert into users (username, age, gender, password, email) values ('{username}', {age}, '{gender}', '{password}', '{email}');"
-    cur.execute(add_user)
-    conn.commit()
+    # check duplicate username
+    check_is_exist = f"select * from users where username = '{username}';"
+    query_db(check_is_exist)
+    if not query_db(check_is_exist).empty:
+        return False
+    else: 
+        add_user = f"insert into users (username, age, gender, password, email) values ('{username}', {age}, '{gender}', '{password}', '{email}');"
+        cur.execute(add_user)
+        conn.commit()
     cur.close()
     conn.close()
+    return True
 
 # User Login
 def login(username, password):
@@ -76,7 +82,7 @@ def new_comment(content, rating, d_name, u_name):
     cur.close()
     conn.close()
 
-# Sidebar
+# Places
 if place == "Home":
     st.header("Home")
     "Here are all the data we have"
@@ -125,23 +131,16 @@ if place == "Home":
                          order by S.year, S.season, S.quantity"""
     all_sales = query_db(query_all_sales)
     all_sales
-elif place == "Basic Query":
-    st.header("Basic Query")
-    "Here you can perform some basic queries"
-    tasks = ["Lorem ipsum dolor sit amet",
-            "Lorem ipsum dolor sit amet",
-            "Lorem ipsum dolor sit amet",
-            "Lorem ipsum dolor sit amet",
-            "Lorem ipsum dolor sit amet"]
-    functions = st.selectbox("Queries", tasks)
 elif place == "Advanced Query":
     st.header("Advanced Query")
     "Here you can perform some advanced queries"
     tasks = ["List All devices produced by a particular supplier",
             "View devices that AVG score within a particular range",
+            "List all products from a specific price range",
             "List all reviews of a product",
             "View all sales of a particular retailer",
-            "List the sales of devices in descending order"]
+            "List the sales of devices in descending order",
+            "List all products from chosen companies"]
     functions = st.selectbox("Queries", tasks)
     if functions == tasks[0]:
         st.subheader("List All devices produced by a particular supplier")
@@ -152,15 +151,19 @@ elif place == "Advanced Query":
             sql_devices = f"select d.name,launch_date,type,price,capacity,chip,camera,battery,dimension,screen_size,weight,os from devices d, produce p where d.name = p.D_name and p.M_name='{supplier_sel}';"
             devices = query_db(sql_devices)
             st.dataframe(devices)
-
     elif functions == tasks[1]:
         st.subheader("View devices that AVG score within a particular range")
         start_rating, end_rating = st.select_slider('Select a range of ratings', options=[0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5],value=(3.5, 4.5))
         sql_devices = f'select d.name, d.launch_date, sum(r.rating)/count(*) as avg_rating from devices d,reviews r where d.name = r.D_name group by d.name having sum(r.rating)/count(*) >= {start_rating} and sum(r.rating)/count(*) <= {end_rating};'
         devices = query_db(sql_devices)
         st.dataframe(devices)
-
     elif functions == tasks[2]:
+        st.subheader("List all products from a specific price range")
+        start_price, end_price = st.slider('Select price range', 0.0, 2000.0, (500.0, 1000.0))
+        sql_devices = f'select name, C_name as company, launch_date, type, price, capacity, chip, camera, battery, dimension, screen_size, weight, os from devices where price >= {start_price} and price <= {end_price};'
+        devices = query_db(sql_devices)
+        st.dataframe(devices)
+    elif functions == tasks[3]:
         st.subheader("List all reviews of a product")
         sql_devices = "select name from devices;"
         devices = query_db(sql_devices)['name'].tolist()
@@ -169,8 +172,7 @@ elif place == "Advanced Query":
             sql_reviews = f"select D_name as name, rating, time, U_name, content from reviews where D_name = '{device_sel}';"
             reviews = query_db(sql_reviews)
             st.dataframe(reviews)
-
-    elif functions == tasks[3]:
+    elif functions == tasks[4]:
         st.subheader("View all sales of a particular retailer")
         sql_retailers = 'select name from retailers;'
         retailers = query_db(sql_retailers)['name'].tolist()
@@ -179,8 +181,7 @@ elif place == "Advanced Query":
             sql_sales = f"select r.D_name as name, s.year, s.season, s.quantity from sales s, Retailers_Sale r where r.R_name = '{retailer_sel}' and r.sid = s.id;"
             sales = query_db(sql_sales)
             st.dataframe(sales)
-
-    elif functions == tasks[4]:
+    elif functions == tasks[5]:
         st.subheader("List the sales of devices in descending order")
         sql_year = "select distinct year from sales;"
         years = query_db(sql_year)['year'].tolist()
@@ -189,9 +190,22 @@ elif place == "Advanced Query":
             sql_sales = f"select r.D_name as name, sum(s.quantity) as quantity from Retailers_Sale r, sales s where s.year = '{year_sel}' and r.sid = s.id group by r.D_name order by sum(s.quantity) desc;"
             sales = query_db(sql_sales)
             st.dataframe(sales)
+    elif functions == tasks[6]:
+        st.subheader("List all products from chosen companies")
+        sql_companies = "select name from companies;"
+        companies = query_db(sql_companies)['name'].tolist()
+        company_mulsel = st.multiselect('Choose companies', companies)
+        if company_mulsel:
+            company_str = ','.join(["'" + company + "'" for company in company_mulsel])
+            # print(dates_str)
+            sql_device = f"""select name, c_name as company
+                             from devices
+                             where c_name in ({company_str})"""
+            result = query_db(sql_device)
+            st.dataframe(result)
 
+# Account
 if choice == "Login":
-    # st.subheader("Login")
     username = st.sidebar.text_input("User Name")
     password = st.sidebar.text_input("Password", type='password')
     if st.sidebar.checkbox("Login"):
@@ -231,12 +245,9 @@ if choice == "Login":
                         query_all_reviews = f"select time, d_name as device, rating, content as comment from reviews where u_name = '{username}';"
                         all_reviews = query_db(query_all_reviews)
                         st.dataframe(all_reviews)
-
         else:
             st.warning("Incorrect Username/Password")
 elif choice == "Sign Up":
-    st.subheader("Create New Account")
-    
     username = st.sidebar.text_input("* Username")
     password = st.sidebar.text_input("* Password", type='password')
     email = st.sidebar.text_input("* E-mail")
@@ -244,5 +255,10 @@ elif choice == "Sign Up":
     gender = st.sidebar.selectbox("Gender", ["M", "F"])
 
     if st.sidebar.button("Sign Up"):
-        register(username, make_hashes(password), age, gender, email)
-        st.sidebar.success("You have successfully created a valid Account")
+        if username == "" or password == "" or email == "" or age == "":
+            st.sidebar.warning('Please enter all information')
+        else:
+            if register(username, make_hashes(password), age, gender, email):
+                st.sidebar.success("Success")
+            else:
+                st.sidebar.warning('Please choose another username and try again')
