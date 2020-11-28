@@ -110,5 +110,5 @@ create table Reviews(
     U_name varchar(32) not null,
     foreign key (D_name) references Devices(name),
     foreign key (U_name) references Users(username),
-    check (rating in (1, 2, 3, 4, 5))
+    check (rating in (0, 1, 2, 3, 4, 5))
 );

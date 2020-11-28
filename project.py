@@ -1,4 +1,5 @@
 import pandas as pd
+import datetime
 import psycopg2
 import streamlit as st
 from configparser import ConfigParser
@@ -11,7 +12,7 @@ def get_config(filename='database.ini', section='postgresql'):
     return {k: v for k, v in parser.items(section)}
 
 # perform sql queries
-@st.cache
+# @st.cache
 def query_db(sql: str):
     # print(f'Running query_db(): {sql}')
  
@@ -37,7 +38,7 @@ def query_db(sql: str):
 
 st.title("Mobile Device Database")
 
-menu = ["Home","Login","Sign Up"]
+menu = ["Home", "Login", "Sign Up"]
 choice = st.sidebar.selectbox("Menu", menu)
 
 # Security
@@ -62,6 +63,17 @@ def login(username, password):
     check = f"select * from users where username = '{username}' and password = '{password}';"
     return not query_db(check).empty
 
+# new comment
+def new_comment(content, rating, d_name, u_name):
+    db_info = get_config()
+    conn = psycopg2.connect(**db_info)
+    cur = conn.cursor()
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d")
+    cur.execute('insert into reviews (content, rating, time, d_name, u_name) values (%s, %s, %s, %s, %s);', (content, rating, current_time, d_name, u_name))
+    conn.commit()
+    cur.close()
+    conn.close()
+
 # Sidebar
 if choice == "Home":
     st.subheader("Home")
@@ -82,15 +94,16 @@ if choice == "Home":
         suppliers = query_db(sql_suppliers)['name'].tolist()
         supplier_sel = st.selectbox('choose a supplier', suppliers)
         if supplier_sel:
-            sql_devices = f"select * from devices d, suppliers s,produce p where d.name = p.D_name and d.launch_date = p.launch_date and p.M_name='{supplier_sel}';"
+            sql_devices = f"select d.name,launch_date,type,price,capacity,chip,camera,battery,dimension,screen_size,weight,os from devices d, produce p where d.name = p.D_name and p.M_name='{supplier_sel}';"
             devices = query_db(sql_devices)
             st.dataframe(devices)
     
-    # elif function == tasks[1]:
-    #     st.subheader("View devices that AVG score within a particular range")
-    #     sql_devices = f'select d.name, d.launch_date, sum(r.rating)/count(*) as avg_rating from devices d,reviews r where d.name = r.D_name and d.launch_date = r.launch_date groupy by d.name,d.launch_date having avg_rating >= {left} and avg_rating <= {right};'
-    #     devices = query_db(sql_devices)
-    #     st.dataframe(devices)
+    elif functions == tasks[1]:
+        st.subheader("View devices that AVG score within a particular range")
+        start_rating, end_rating = st.select_slider('Select a range of ratings', options=[0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5],value=(3.5, 4.5))
+        sql_devices = f'select d.name, d.launch_date, sum(r.rating)/count(*) as avg_rating from devices d,reviews r where d.name = r.D_name group by d.name having sum(r.rating)/count(*) >= {start_rating} and sum(r.rating)/count(*) <= {end_rating};'
+        devices = query_db(sql_devices)
+        st.dataframe(devices)
         
     elif functions == tasks[2]:
         st.subheader("List all reviews of a product")
@@ -98,7 +111,7 @@ if choice == "Home":
         devices = query_db(sql_devices)['name'].tolist()
         device_sel = st.selectbox('choose a device', devices)
         if device_sel:
-            sql_reviews = f"select D_name as name, launch_date, rating, time, U_name, content from reviews where D_name = '{device_sel}';"
+            sql_reviews = f"select D_name as name, rating, time, U_name, content from reviews where D_name = '{device_sel}';"
             reviews = query_db(sql_reviews)
             st.dataframe(reviews)
             
@@ -108,40 +121,52 @@ if choice == "Home":
         retailers = query_db(sql_retailers)['name'].tolist()
         retailer_sel = st.selectbox('choose a retailer', retailers)
         if retailer_sel:
-            sql_sales = f"select r.sid, r.D_name as name, r.launch_date, s.year, s.season, s.quantity from sales s, Retailers_Sale r where r.R_name = '{retailer_sel}' and r.sid = s.id;"
+            sql_sales = f"select r.D_name as name, s.year, s.season, s.quantity from sales s, Retailers_Sale r where r.R_name = '{retailer_sel}' and r.sid = s.id;"
             sales = query_db(sql_sales)
             st.dataframe(sales)
         
     elif functions == tasks[4]:
         st.subheader("List the sales of devices in descending order")
-        sql_devices = "select name from devices;"
-        devices = query_db(sql_devices)['name'].tolist()
-        device_sel = st.selectbox('choose a device', devices)
-        if device_sel:
-            sql_sales = f"select r.D_name as name, r.launch_date, sum(s.quantity) as quantity from Retailers_Sale r, sales s where r.D_name = '{device_sel}' and r.sid = s.id group by r.D_name order by sum(s.quantity) desc;"
+        sql_year = "select distinct year from sales;"
+        years = query_db(sql_year)['year'].tolist()
+        year_sel = st.selectbox('choose a year', years)
+        if year_sel:
+            sql_sales = f"select r.D_name as name, sum(s.quantity) as quantity from Retailers_Sale r, sales s where s.year = '{year_sel}' and r.sid = s.id group by r.D_name order by sum(s.quantity) desc;"
             sales = query_db(sql_sales)
             st.dataframe(sales)
-        
+
 elif choice == "Login":
-    st.subheader("Login")
+    # st.subheader("Login")
     username = st.sidebar.text_input("User Name")
     password = st.sidebar.text_input("Password", type='password')
     if st.sidebar.checkbox("Login"):
         hashed_pwd = make_hashes(password)
         result = login(username, hashed_pwd)
         if result:
+            # login successful prompt
             st.success("Logged In as {}".format(username))
-            task = st.selectbox("Task",["Add Post","Analytics","Profiles"])
-            if task == "Add Post":
-                st.subheader("Add Your Post")
 
-            elif task == "Analytics":
-                st.subheader("Analytics")
-            elif task == "Profiles":
-                st.subheader("User Profiles")
-                user_result = view_all_users()
-                clean_db = pd.DataFrame(user_result,columns=["Username","Password"])
-                st.dataframe(clean_db)
+            # write new review
+            st.subheader("Write A New Review")
+
+            query_all_devices = 'select name from devices;'
+            all_devices = query_db(query_all_devices)['name'].tolist()
+
+            select_device = st.selectbox('Please choose a device', all_devices)
+            rating = st.select_slider('Overall rating', options=[0, 1, 2, 3, 4, 5])
+            comments = st.text_area('Your comments')
+
+            # submit new comment
+            if st.button("Submit"):
+                new_comment(comments, rating, select_device, username)
+                st.success("You have successfully added a new product review")
+
+                # past reviews
+                st.subheader("Your Reviews")
+                query_all_reviews = f"select time, d_name as Device, rating, content as Comment from reviews where u_name = '{username}';"
+                all_reviews = query_db(query_all_reviews)
+                st.dataframe(all_reviews)
+
         else:
             st.warning("Incorrect Username/Password")
 elif choice == "Sign Up":
