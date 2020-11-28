@@ -1,12 +1,12 @@
-M_name,D_name,launch_date
-Foxconn,iPhone 12 Pro Max,2020-11-3
-Foxconn,iPhone 12 Pro,2020-10-23
-Intel,Surface Laptop Go,2020-10-1
-Samsung,iPad Air,2020-10-23
-Pegatron,Surface Laptop Go,2020-10-1
-Samsung,iPhone 12 Pro,2020-10-23
-Samsung,iPhone 12 Pro Max,2020-11-3
-Intel,Alienware Aurora R11,2020-5-13
-Pegatron,Apple Watch S6,2020-9-18
-Foxconn,HUAWEI Mate 40 Pro+,2020-10-22
-Luxshare,Apple Watch S6,2020-9-18
+M_name,D_name
+Foxconn,iPhone 12 Pro Max
+Foxconn,iPhone 12 Pro
+Intel,Surface Laptop Go
+Samsung,iPad Air
+Pegatron,Surface Laptop Go
+Samsung,iPhone 12 Pro
+Samsung,iPhone 12 Pro Max
+Intel,Alienware Aurora R11
+Pegatron,Apple Watch S6
+Foxconn,HUAWEI Mate 40 Pro+
+Luxshare,Apple Watch S6

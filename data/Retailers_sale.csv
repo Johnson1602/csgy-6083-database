@@ -1,15 +1,15 @@
-D_name,launch_date,R_name,sid
-iPhone 11,2019-9-20,Walmart,1
-iPhone 11,2019-9-20,Walmart,2
-iPhone 11,2019-9-20,Walmart,3
-iPhone 11,2019-9-20,Walmart,4
-Alienware Aurora R11,2020-5-13,Walmart,5
-Alienware Aurora R11,2020-5-13,Walmart,6
-iPad Pro 2018,2018-10-30,Walmart,7
-iPad Pro 2018,2018-10-30,Walmart,8
-iPad Pro 2018,2018-10-30,Walmart,9
-iPad Pro 2018,2018-10-30,Walmart,10
-Samsung S10,2019-2-20,Walmart,11
-Samsung S10,2019-2-20,Walmart,12
-Samsung S10,2019-2-20,Walmart,13
-Samsung S10,2019-2-20,Walmart,14
+D_name,R_name,sid
+iPhone 11,Walmart,1
+iPhone 11,Walmart,2
+iPhone 11,Walmart,3
+iPhone 11,Walmart,4
+Alienware Aurora R11,Walmart,5
+Alienware Aurora R11,Walmart,6
+iPad Pro 2018,Walmart,7
+iPad Pro 2018,Walmart,8
+iPad Pro 2018,Walmart,9
+iPad Pro 2018,Walmart,10
+Samsung S10,Walmart,11
+Samsung S10,Walmart,12
+Samsung S10,Walmart,13
+Samsung S10,Walmart,14

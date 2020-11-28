@@ -19,7 +19,7 @@ create table Companies(
 );
 
 create table Devices(
-    name varchar(32),
+    name varchar(32) primary key,
     launch_date date,
     type varchar(32),
     price decimal,
@@ -32,7 +32,6 @@ create table Devices(
     weight decimal,
     os varchar(32),
     C_name varchar(32) not null,
-    primary key (name, launch_date),
     foreign key (C_name) references Companies(name),
     check (type in ('Phone', 'Laptop', 'Desktop', 'Pad', 'Watch', 'Other'))
 );
@@ -45,10 +44,9 @@ create table Suppliers(
 create table Produce(
     M_name varchar(32),
     D_name varchar(32),
-    launch_date date,
-    primary key (M_name, D_name, launch_date),
+    primary key (M_name, D_name),
     foreign key (M_name) references Suppliers(name),
-    foreign key (D_name, launch_date) references Devices(name, launch_date)
+    foreign key (D_name) references Devices(name)
 );
 
 create table Collaborate(
@@ -75,11 +73,10 @@ create table Sales(
 
 create table Retailers_Sale(
     D_name varchar(32),
-    launch_date date,
     R_name varchar(32),
     sid integer,
-    primary key (D_name, launch_date, R_name, sid),
-    foreign key (D_name, launch_date) references Devices(name, launch_date),
+    primary key (D_name, R_name, sid),
+    foreign key (D_name) references Devices(name),
     foreign key (R_name) references Retailers(name),
     foreign key (sid) references Sales(id)
 );
@@ -110,9 +107,8 @@ create table Reviews(
     rating integer,
     time date,
     D_name varchar(32) not null,
-    launch_date date not null,
     U_name varchar(32) not null,
-    foreign key (D_name, launch_date) references Devices(name, launch_date),
+    foreign key (D_name) references Devices(name),
     foreign key (U_name) references Users(username),
     check (rating in (1, 2, 3, 4, 5))
 );
