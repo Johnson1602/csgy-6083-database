@@ -16,7 +16,7 @@
 ## commands
 - connect to database (cloud): psql -h localhost -U wx650 project_db
 - create tables: \i '/Users/johnson/Downloads/Project/schema.sql'
-- add data into tables
+- add data into tables (local)
 	- \copy companies from '/Users/johnson/Downloads/Project/data/Companies.csv' with delimiter ',' csv header;
 	- \copy devices from '/Users/johnson/Downloads/Project/data/Devices.csv' with delimiter ',' csv header;
 	- \copy suppliers from '/Users/johnson/Downloads/Project/data/Suppliers.csv' with delimiter ',' csv header;
@@ -26,6 +26,18 @@
 	- \i '/Users/johnson/Downloads/Project/data/Sales.sql'
 	- \copy retailers_sale from '/Users/johnson/Downloads/Project/data/Retailers_sale.csv' with delimiter ',' csv header;
 	- \copy stores from '/Users/johnson/Downloads/Project/data/Stores.csv' with delimiter ',' csv header;
+- add data into tables (cloud)
+	- \copy companies from '/home/wx650/project/data/Companies.csv' with delimiter ',' csv header;
+	- \copy devices from '/home/wx650/project/data/Devices.csv' with delimiter ',' csv header;
+	- \copy suppliers from '/home/wx650/project/data/Suppliers.csv' with delimiter ',' csv header;
+	- \copy produce from '/home/wx650/project/data/Produce.csv' with delimiter ',' csv header;
+	- \copy collaborate from '/home/wx650/project/data/Collaborate.csv' with delimiter ',' csv header;
+	- \copy retailers from '/home/wx650/project/data/Retailers.csv' with delimiter ',' csv header;
+	- \i '/home/wx650/project/data/Sales.sql'
+	- \copy retailers_sale from '/home/wx650/project/data/Retailers_sale.csv' with delimiter ',' csv header;
+	- \copy stores from '/home/wx650/project/data/Stores.csv' with delimiter ',' csv header;
+	- \copy users from '/home/wx650/project/data/Users.csv' with delimiter ',' csv header;
+	- \i '/home/wx650/project/data/Reviews.sql'
 
 ## sql queries (with join or group by)
 - 某个制造商生产的所有产品：Devices join Manufactures

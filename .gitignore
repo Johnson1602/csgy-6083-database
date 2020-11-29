@@ -5,3 +5,5 @@ Mobile Device Report*
 A Database Application With A Web Front-end.pdf
 .python-version
 database.ini
+database (cloud).ini
+load-data.sh
