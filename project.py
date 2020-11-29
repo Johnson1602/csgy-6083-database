@@ -153,10 +153,16 @@ elif place == "Advanced Query":
             st.dataframe(devices)
     elif functions == tasks[1]:
         st.subheader("View devices that AVG score within a particular range")
-        start_rating, end_rating = st.select_slider('Select a range of ratings', options=[0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5],value=(3.5, 4.5))
+        rating_range = [0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5]
+        start_rating = st.selectbox('From', rating_range)
+        end_rating = st.selectbox('To', rating_range)
+        if start_rating > end_rating:
+            start_rating, end_rating = end_rating, start_rating
         sql_devices = f'select d.name, d.launch_date, sum(r.rating)/count(*) as avg_rating from devices d,reviews r where d.name = r.D_name group by d.name having sum(r.rating)/count(*) >= {start_rating} and sum(r.rating)/count(*) <= {end_rating};'
         devices = query_db(sql_devices)
         st.dataframe(devices)
+        # streamlit version 0.64.0 doesn't support
+        # start_rating, end_rating = st.select_slider('Select a range of ratings', options=[0, 0.5, 1, 1.5, 2, 2.5, 3, 3.5, 4, 4.5, 5],value=(3.5, 4.5))
     elif functions == tasks[2]:
         st.subheader("List all products from a specific price range")
         start_price, end_price = st.slider('Select price range', 0.0, 2000.0, (500.0, 1000.0))
@@ -232,7 +238,7 @@ if choice == "Login":
                     all_devices = query_db(query_all_devices)['name'].tolist()
 
                     select_device = st.selectbox('Please choose a device', all_devices)
-                    rating = st.select_slider('Overall rating', options=[0, 1, 2, 3, 4, 5])
+                    rating = st.selectbox('Overall rating', [0, 1, 2, 3, 4, 5])
                     comments = st.text_area('Your comments')
 
                     # submit new comment
