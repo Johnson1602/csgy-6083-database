@@ -50,3 +50,13 @@
 - retailer_sales table - done
 - update schema.sql(Supplier,Collaborate) - done
 - update ER - done
+
+## Keep Streamlit App Running
+- ssh -L logon to gauss server
+- cd project folder: $ cd project/
+- launch a new tmux session: $ tmux
+- run the app: $ streamlit run project.py --server.address=localhost --server.port=8548
+- detach from the tmux session by using ctrl + b, then d
+- In another terminal, you can use the following command to check running status or terminate the app
+	- show streamlit process information: $ ps -u wx650 | grep streamlit
+	- kill the process: $ kill [PID]

@@ -1,8 +1,10 @@
 .DS_Store
-Sample Project/
-Mobile Device Report*
+01_Sample Project/
+01_A Database Application With A Web Front-end.pdf
+01_Project Presentation Logistics.pdf
+02_Project Presentation.pptx
+02_Submit/05_contributions
+*report/
 ~*
-A Database Application With A Web Front-end.pdf
 .python-version
-database.ini
-database (cloud).ini
+*.ini
